@@ -87,7 +87,7 @@ True
 
 原理解释：
 
-<img class="alignnone size-full wp-image-106" src="http://pytorchchina.com/wp-content/uploads/2018/12/WechatIMG1376.jpeg" alt="" width="3544" height="1952" />
+<img class="alignnone size-full wp-image-106" src="../Image/find_gradient.png" alt="" width="1000" height="500" />
 <div class="trans-left">
 <div class="trans-input-wrap">
 <div class="input-wrap" dir="ltr">
