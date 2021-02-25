@@ -1,7 +1,7 @@
 # Tensor
 
 ## 什么是Tensor
-Tensor（张量）是PyTorch最基本的操作对象，表示的是一个多维的矩阵，比如零维就是一个点，一维就向量，二维就是一般的矩阵，多维就相当于一个多维的数组，与python的numpy是对应的，而且PyTorch的Tensor可以和numpy的ndarray相互转换，唯一不同的是PyTorch可以再GPU上运行，而numpy的ndarray只能在CPU上运行。
+Tensor（张量）是PyTorch最基本的操作对象，表示的是一个多维的矩阵，比如零维就是一个点，一维就向量，二维就是一般的矩阵，多维就相当于一个多维的数组，与python的numpy是对应的，而且PyTorch的Tensor可以和numpy的ndarray相互转换，唯一不同的是PyTorch可以在GPU上运行，而numpy的ndarray只能在CPU上运行。
 
 ## Tensor的基本数据类型
 * 32位浮点型  torch.FloatTensor（默认）
@@ -40,6 +40,7 @@ print(x)
 ![](../Image/输出02.PNG)
 
 <h4>3.torch.randn():构造满足元素均值为0，方差为1的正态分布的Tensor
+
 ```buildoutcfg
 x = torch.randn(2,3)
 print(x)
@@ -76,10 +77,8 @@ print(x)
 x = x.new_ones(5, 3, dtype=torch.double)
 print(x)
 
-x = torch.randn_like(x, dtype=torch.float)
-# 重写了数据类型
-print(x)
-# 矩阵的大小相同
+x = torch.randn_like(x, dtype=torch.float) # 重写了数据类型
+print(x) # 矩阵的大小相同
 ```
 输出结果：
 
@@ -127,7 +126,7 @@ print(y)
 
 ![](../Image/输出07.PNG)
 
-注意：任何使张量发生变化的操作都有一个前缀'_'。例如：x_copy_(y),x_t()，将会改变x
+注意：任何使张量发生变化的操作都有一个前缀'_'。例如：`x.copy_(y), x.t_()`，将会改变x
 
 ### 绝对值运算
 
@@ -183,6 +182,7 @@ print(z)
 ![](../Image/输出16.PNG)
 
 <h4>2.torch.mm()返回输入参数的求积结果,但被传入的参数会被当作矩阵进行处理，要求前一个矩阵的行数必须和后一个矩阵的列数相等
+
 ```buildoutcfg
 x = torch.randn(2,3)
 print(x)
